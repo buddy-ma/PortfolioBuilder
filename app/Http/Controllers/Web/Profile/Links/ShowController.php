@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Web\Profile\Links;
 
 use App\Http\Controllers\Controller;
 use App\Models\Link;
+use App\Models\Template;
 use Illuminate\Http\Request;
 
 class ShowController extends Controller
@@ -17,7 +18,8 @@ class ShowController extends Controller
     public function __invoke(Request $request)
     {
         return view('profile.links.show', [
-            'profile' => auth()->user()->profile
+            'profile' => auth()->user()->profile,
+            'templates' => Template::get(),
         ]);
     }
 }

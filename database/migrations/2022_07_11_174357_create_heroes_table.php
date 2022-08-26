@@ -13,17 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('links', function (Blueprint $table) {
+        Schema::create('heroes', function (Blueprint $table) {
             $table->id();
-            $table->string('token');
-
             $table->foreignId('profile_id')
                 ->index()
                 ->constrained()
                 ->cascadeOnDelete();
-
-            $table->tinyInteger('selected')->default(0);
-
+            $table->string('title');
+            $table->text('description');
+            $table->string('button')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
@@ -35,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('links');
+        Schema::dropIfExists('heroes');
     }
 };

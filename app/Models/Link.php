@@ -17,4 +17,12 @@ class Link extends Model
             foreignKey: 'profile_id'
         );
     }
+
+    public function template(): BelongsTo
+    {
+        return $this->belongsTo(
+            related: Template::class,
+            foreignKey: 'template_id'
+        );
+    }
 }

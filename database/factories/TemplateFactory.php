@@ -1,14 +1,12 @@
 <?php
 
 namespace Database\Factories;
-
-use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Link>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Template>
  */
-class LinkFactory extends Factory
+class TemplateFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -18,7 +16,8 @@ class LinkFactory extends Factory
     public function definition()
     {
         return [
-            'token' => Str::random(),
+            'title' => $this->faker->title(),
+            'blade' => 'index',
         ];
     }
 }

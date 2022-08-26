@@ -3,8 +3,9 @@
 namespace App\Http\Controllers\Web\Profile\Links\Template;
 
 use App\Http\Controllers\Controller;
-use App\Models\Link;
-use Illuminate\Http\Request;
+use App\Models\ProjectCategory;
+use App\Models\Template;
+use Illuminate\Contracts\Auth\Authenticatable;
 
 class ShowController extends Controller
 {
@@ -14,10 +15,28 @@ class ShowController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function __invoke(Request $request, Link $link)
+    public function try($id)
     {
-        return view("profile.links.template.{$link->template}", [
-            'link' => $link
+        $template = Template::findOrFail($id);
+        // $categories = ProjectCategory::where('profile_id', $id);
+
+        return view("template.{$template->blade}", [
+            'template' => $template,
+            'profile' => auth()->user()->profile
+        ]);
+    }
+
+    public function add()
+    {
+        return view('profile.add_template');
+    }
+
+    public function portfolio(Authenticatable $user) {
+        $template = Template::findOrFail($user->profile->template_id);
+
+        return view("template.{$template->blade}", [
+            'template' => $template,
+            'profile' => auth()->user()->profile
         ]);
     }
 }

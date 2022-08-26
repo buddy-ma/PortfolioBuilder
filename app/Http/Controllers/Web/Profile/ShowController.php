@@ -22,4 +22,11 @@ class ShowController extends Controller
             'user' => $user->load(['profile']),
         ]);
     }
+
+    public function hero(Authenticatable $user)
+    {
+        return view('profile.show_hero', [
+            'user' => $user
+        ]);
+    }
 }

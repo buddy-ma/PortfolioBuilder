@@ -19,25 +19,30 @@ use App\Http\Controllers\Web\Profile\Links\Template\ShowController as TemplateSh
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    return redirect('/dashboard');
 });
 
+// Route::redirect('/', '/portfolio');
+
 Route::middleware('auth')->group(function () {
+    Route::get('/portfolio', [TemplateShowController::class, 'portfolio'])->name('portfolio');
     Route::get('dashboard', DashboardController::class)->name('dashboard');
 
     Route::prefix('profile')->as('profile.')->group(function () {
-        Route::get('/',ShowController::class)->name('show');
+        Route::get('/', ShowController::class)->name('show');
+        Route::get('/hero', [ShowController::class, 'hero'])->name('hero');
 
         Route::prefix('experiences')->as('experiences.')->group(function () {
             Route::get('/', ExperienceShowController::class)->name('show');
         });
 
-        Route::prefix('links')->as('links.')->group(function () {
-            Route::get('/', LinkShowController::class)->name('show');
-            Route::get('/{link:token}', TemplateShowController::class)->name('template');
+        Route::prefix('templates')->name('templates.')->group(function () {
+            Route::get('/', LinkShowController::class)->name('list');
+            Route::get('/add', [TemplateShowController::class, 'add'])->name('add');
+            Route::get('/{id}', [TemplateShowController::class, 'try'])->name('try');
         });
-
     });
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

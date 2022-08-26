@@ -27,5 +27,16 @@
         {{ $slot }}
 
         @livewire('livewire-ui-spotlight')
+
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script>
+            window.addEventListener('swal:modal', event => {
+                swal({
+                    title: event.detail.message,
+                    text: event.detail.text,
+                    icon: event.detail.type,
+                });
+            });
+        </script>
     </body>
 </html>

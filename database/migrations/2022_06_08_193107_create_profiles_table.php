@@ -17,8 +17,6 @@ return new class extends Migration
             $table->id();
             $table->uuid('uuid')->unique();
 
-            $table->text('bio')->nullable();
-
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')
                 ->references('id')
@@ -26,6 +24,16 @@ return new class extends Migration
                 ->index()
                 ->constrained()
                 ->cascadeOnDelete();
+
+            $table->foreignId('template_id')
+                ->default(1)
+                ->constrained()
+                ->cascadeOnDelete();
+            $table->string('title')->nullable();
+            $table->string('logo')->nullable();
+            $table->text('bio')->nullable();
+            $table->text('numbers')->nullable();
+            $table->string('image')->nullable();
 
             $table->timestamps();
         });

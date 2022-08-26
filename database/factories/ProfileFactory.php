@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Template;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -18,8 +19,9 @@ class ProfileFactory extends Factory
     public function definition()
     {
         return [
+            'template_id' => 1,
             'bio' => $this->faker->paragraphs(5, true),
-            'user_id' => User::factory()
+            'user_id' => User::factory(),
         ];
     }
 }

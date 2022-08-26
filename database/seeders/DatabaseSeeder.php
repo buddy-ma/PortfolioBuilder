@@ -4,7 +4,11 @@ namespace Database\Seeders;
 
 use App\Models\Link;
 use App\Models\User;
+use App\Models\Template;
 use App\Models\Experience;
+use App\Models\Hero;
+use App\Models\Project;
+use App\Models\ProjectCategory;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
@@ -17,9 +21,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        Template::factory(2)->create(
+        [
+            'title' => 'Template 01',
+            'blade' => 'index',
+        ]);  
+
         $user = User::factory()->create([
-            'name' => 'nord',
-            'email' => 'nord@coders.com'
+            'name' => 'buddy',
+            'email' => 'info@buddy.ma'
         ]);
 
         Experience::factory(10)->create([
@@ -29,5 +39,21 @@ class DatabaseSeeder extends Seeder
         Link::factory(3)->create([
             'profile_id' => $user->profile->id
         ]);
+
+        ProjectCategory::factory(4)->create([
+            'profile_id' => $user->profile->id
+        ]);
+
+        Project::factory(9)->create([
+            'profile_id' => $user->profile->id
+        ]);
+
+        Hero::create(
+        [
+            'profile_id' => $user->profile->id,
+            'title' => 'Hi, I am buddy!',
+            'description' => 'Full stack web devlopper!',
+            'button' => 'Get Started',
+        ]);  
     }
 }
