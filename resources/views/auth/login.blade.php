@@ -59,10 +59,11 @@
                     <h2 class="text-2xl leading-snug font-semibold">
                         Welcome Home,
                     </h2>
-                    <h1 class="lg:text-3xl xl:text-5xl xl:leading-tight font-extrabold">Easy way to create your portfolio today !</h1>
-                    <button
-                        class="inline-block flex-none px-4 py-3 border-2 rounded-lg font-medium border-black bg-black text-white">
-                        Create account here</button>
+                    <h1 class="lg:text-3xl xl:text-5xl xl:leading-tight font-extrabold pb-5">Easy way to create your portfolio today !</h1>
+                    <a href="/register">
+                        <button class="inline-block flex-none px-4 py-3 border-2 rounded-lg font-medium border-black bg-black text-white">
+                        Create your account here</button>
+                    </a>
                 </div>
                 <p class="font-medium">© 2022 Buddy</p>
             </div>

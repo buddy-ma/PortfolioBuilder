@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Buddy - Login</title>
+    <title>Buddy - Register</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -54,15 +54,16 @@
                     <img class="rounded-full w-16 h-16" src="{{ asset('img/buddyy.png') }}" alt="">
                     <p class="font-medium font-mono text-2xl">Buddy</p>
                 </div>
-                <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_rst3usxp.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;" loop autoplay hover></lottie-player>
+                <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_2t5zvcho.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;" loop autoplay hover></lottie-player>
                 <div class='space-y-5'>
                     <h2 class="text-2xl leading-snug font-semibold">
                         Welcome Home,
                     </h2>
-                    <h1 class="lg:text-3xl xl:text-5xl xl:leading-tight font-extrabold">Easy way to create your portfolio today !</h1>
-                    <button
-                        class="inline-block flex-none px-4 py-3 border-2 rounded-lg font-medium border-black bg-black text-white">
-                        Create account here</button>
+                    <h1 class="lg:text-3xl xl:text-5xl xl:leading-tight font-extrabold pb-5">Easy way to create your portfolio today !</h1>
+                    <a href="/login">
+                        <button class="inline-block flex-none px-4 py-3 border-2 rounded-lg font-medium border-black bg-black text-white">
+                        Login here</button>
+                    </a>
                 </div>
                 <p class="font-medium">© 2022 Buddy</p>
             </div>
@@ -80,9 +81,9 @@
                         <a href="#" class="font-medium text-lg">Brand</a>
                     </div>
                     <div class="flex items-center space-x-2">
-                        <span>Not a member? </span>
-                        <a href="#" class="underline font-medium text-[#070eff]">
-                            Sign Up now
+                        <span>Already with an account? </span>
+                        <a href="/login" class="underline font-medium text-[#070eff]">
+                            Sign In now
                         </a>
                     </div>
                 </div>

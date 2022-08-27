@@ -52,63 +52,69 @@
                     <p class="font-medium font-mono text-2xl mr-50">Buddy</p>
                 </div>
                 <ul>
-                  <li class="py-3">
-                    <lord-icon
-                        src="https://cdn.lordicon.com/rjzlnunf.json"
-                        trigger="loop"
-                        colors="primary:#eeaa77,secondary:#104891"
-                        style="width:60px;height:60px">
-                    </lord-icon>
-                    <p class="font-semibold font-mono text-2xl">Select a template</p>
-                    <p class="text-gray-400 text-md">Choose a template that you like from our professional & well-designed gallery</p>
-                  </li>
-                  <li class="py-3">
-                    <lord-icon
-                        src="https://cdn.lordicon.com/nocovwne.json"
-                        trigger="loop"
-                        colors="primary:#eeaa77,secondary:#104891"
-                        style="width:60px;height:60px">
-                    </lord-icon>
-                    <p class="font-semibold font-mono text-2xl">Complete Personal Profile</p>
-                    <p class="text-gray-400 text-md">Complete your basic data & information about yourself.</p>
-                  </li>
-                  <li class="py-3">
-                    <lord-icon
-                        src="https://cdn.lordicon.com/tvyxmjyo.json"
-                        trigger="loop"
-                        colors="primary:#eeaa77,secondary:#104891"
-                        style="width:60px;height:60px">
-                    </lord-icon>
-                    <p class="font-semibold font-mono text-2xl">Customize the portfolio</p>
-                    <p class="text-gray-400 text-md">Pick more options to insert into your portfolio and add more designs into it</p>
-                  </li>
-                  <li class="py-3">
-                    <lord-icon
-                        src="https://cdn.lordicon.com/lupuorrc.json"
-                        trigger="loop"
-                        colors="primary:#eeaa77,secondary:#104891"
-                        style="width:60px;height:60px">
-                    </lord-icon>
-                    <p class="font-semibold font-mono text-2xl">Finish</p>
-                    <p class="text-gray-400 text-md">Save your data and share your portfolio to the world !</p>
-                  </li>
+                    <li class="py-3">
+                        <div class="flex items-center">
+                            <div class="icon p-3.5 mr-3">
+                                <lord-icon src="https://cdn.lordicon.com/rjzlnunf.json" trigger="loop"
+                                    colors="primary:#0ea5e9,secondary:#104891" style="width:60px;height:60px">
+                                </lord-icon>
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <p class="font-semibold font-mono text-2xl">Select a template</p>
+                                <p class="text-gray-400 text-md">Choose a template that you like from our professional
+                                    & well-designed gallery</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="py-3">
+                        <div class="flex items-center">
+                            <div class="icon p-3.5 mr-3">
+                                <lord-icon src="https://cdn.lordicon.com/nocovwne.json" trigger="loop"
+                                    colors="primary:#0ea5e9,secondary:#104891" style="width:60px;height:60px">
+                                </lord-icon>
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <p class="font-semibold font-mono text-2xl">Complete Personal Profile</p>
+                                <p class="text-gray-400 text-md">Complete your basic data & information about yourself.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="py-3">
+                        <div class="flex items-center">
+                            <div class="icon p-3.5 mr-3">
+                                <lord-icon src="https://cdn.lordicon.com/tvyxmjyo.json" trigger="loop"
+                                    colors="primary:#0ea5e9,secondary:#104891" style="width:60px;height:60px">
+                                </lord-icon>
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <p class="font-semibold font-mono text-2xl">Customize the portfolio</p>
+                                <p class="text-gray-400 text-md">Pick more options to insert into your portfolio and add more
+                                    designs into it</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="py-3">
+                        <div class="flex items-center">
+                            <div class="icon p-3.5 mr-3">
+                                <lord-icon src="https://cdn.lordicon.com/lupuorrc.json" trigger="loop"
+                                    colors="primary:#0ea5e9,secondary:#104891" style="width:60px;height:60px">
+                                </lord-icon>
+                            </div>
+                            <div class="flex flex-col justify-center">
+                                <p class="font-semibold font-mono text-2xl">Finish</p>
+                                <p class="text-gray-400 text-md">Save your data and share your portfolio to the world !</p>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
+                <a href="/login">
+                    <button class="inline-block flex-none px-4 py-3 border-2 rounded-lg font-medium bg-sky-500 text-white">
+                    Get Started !</button>
+                </a>
                 <p class="font-medium">© 2022 Buddy</p>
             </div>
 
-            <div class="flex flex-1 flex-col items-center bg-yellow-400 justify-center px-10 relative">
-                <div class="flex lg:hidden justify-between items-center w-full py-4">
-                    <div class="flex items-center justify-start space-x-3">
-                        <span class="bg-black rounded-full w-6 h-6"></span>
-                        <a href="#" class="font-medium text-lg">Brand</a>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <span>Not a member? </span>
-                        <a href="#" class="underline font-medium text-[#070eff]">
-                            Sign up now
-                        </a>
-                    </div>
-                </div>
+            <div class="flex flex-1 flex-col items-center bg-gradient-to-r from-sky-500 to-indigo-500 justify-center px-10 relative">
                 <div class="flex flex-1 flex-col justify-center space-y-5 w-2xl">
 
                 </div>

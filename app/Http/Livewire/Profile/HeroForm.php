@@ -23,11 +23,12 @@ class HeroForm extends Component implements HasForms
     public function mount(User $user): void
     {
         $this->hero = $user->profile->hero;
-
-        $this->idd = $this->hero->id;
-        $this->title = $this->hero->title;
-        $this->description = $this->hero->description;
-        $this->button = $this->hero->button;
+        if(isset($this->hero)){
+            $this->idd = $this->hero->id;
+            $this->title = $this->hero->title;
+            $this->description = $this->hero->description;
+            $this->button = $this->hero->button;
+        }
     }
 
     protected function getFormSchema(): array
