@@ -19,8 +19,8 @@ use App\Http\Controllers\Web\Profile\Links\Template\ShowController as TemplateSh
 */
 
 Route::get('/', function () {
-    // return view('welcome');
-    return redirect('/dashboard');
+    return view('welcome');
+    // return redirect('/dashboard');
 });
 
 // Route::redirect('/', '/portfolio');
